@@ -1,5 +1,7 @@
 # jwook0819-prog.github.io
 
+> **새 주소(https://onemoregrab.github.io)로 이전됨. 이 저장소는 이동 안내용이다.** 페이지는 모두 새 주소의 같은 경로로 이동한다. `app-ads.txt` 와 `/omg-policy/notice.json` 은 옛 빌드가 읽을 수 있어 그대로 둔다.
+
 한 판 더! 인형뽑기 공식 홈페이지(GitHub Pages).
 
 - **이 저장소의 HTML·CSS·JS 는 빌드 결과물이다.** 소스는 운영자의 비공개 저장소에 있다. 여기서 직접 고치지 말고 그쪽에서 빌드한다.

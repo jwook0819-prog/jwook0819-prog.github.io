@@ -3,149 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>한 판 더! 인형뽑기 — 흔들리는 집게의 3D 물리 인형뽑기</title>
-<meta name="description" content="귀여운 인형을 집게로 뽑아 모으는 3D 물리 인형뽑기. 한국·일본·프랑스·미국 등 여러 나라를 여행하며 나라마다 20스테이지, 새 나라는 계속 늘어나요.">
-<link rel="canonical" href="https://jwook0819-prog.github.io/">
-<meta name="theme-color" content="#0E0A1F">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="한 판 더! 인형뽑기 — 흔들리는 집게의 3D 물리 인형뽑기">
-<meta property="og:description" content="귀여운 인형을 집게로 뽑아 모으는 3D 물리 인형뽑기. 한국·일본·프랑스·미국 등 여러 나라를 여행하며 나라마다 20스테이지, 새 나라는 계속 늘어나요.">
-<meta property="og:url" content="https://jwook0819-prog.github.io/">
-<meta property="og:image" content="https://jwook0819-prog.github.io/assets/img/icon-512.png">
-<link rel="icon" type="image/png" href="/assets/img/icon-192.png">
-<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-<link rel="preload" href="/assets/fonts/jua-site.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css">
+<title>새 주소로 이동합니다 — 한 판 더! 인형뽑기</title>
+<meta name="description" content="한 판 더! 인형뽑기 공식 사이트가 새 주소로 옮겼어요.">
+<link rel="canonical" href="https://onemoregrab.github.io/">
+<meta http-equiv="refresh" content="0; url=https://onemoregrab.github.io/">
+<script>location.replace("https://onemoregrab.github.io/" + location.search + location.hash)</script>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0E0A1F;color:#fff;font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif;text-align:center;padding:24px}a{color:#ffd54a;word-break:break-all}</style>
 </head>
 <body>
-<a class="skip" href="#main">본문으로 건너뛰기</a>
-<header class="top">
-  <a class="brand" href="/"><img src="/assets/img/icon-192.png" alt="" width="40" height="40"><span>한 판 더! 인형뽑기</span></a>
-  <details class="menu" id="menu">
-    <summary aria-label="메뉴"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span></summary>
-    <nav class="menu-panel" aria-label="주 메뉴">
-      <a href="/game/">게임 소개</a>
-      <a href="/notice/">공지</a>
-      <a href="/support/">고객문의</a>
-    </nav>
-  </details>
-</header>
-
-<main id="main">
-<section class="hero">
-  <div class="rays" aria-hidden="true"></div>
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow">3D 물리 인형뽑기</p>
-      <h1 class="display">한 판 더!<span class="sub">인형뽑기</span></h1>
-      <p class="lead">진짜 기계처럼 흔들리는 집게로<br>귀여운 인형을 뽑아 모으세요.</p>
-      <p class="cta-row">
-        <span class="btn static" id="cta" data-cta>2026년 11월 24일 출시</span>
-        <a class="ghost" href="#features">게임 둘러보기</a>
-      </p>
-      <p class="fine">Android &middot; 광고 포함 &middot; 앱 내 구매 있음</p>
-    </div>
-    <div class="hero-vis" role="img" aria-label="금색 집게가 내려와 곰 인형을 집어 올리는 그림">
-      <canvas id="hero-canvas" aria-hidden="true"></canvas>
-      <noscript><img src="/assets/img/icon-512.png" alt="" width="320" height="320"></noscript>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="features">
-  <div class="wrap split">
-    <div class="vis">
-      <div class="phone"><img src="/assets/img/play-korea.webp" alt="한국 스테이지 플레이 화면: 집게가 매달려 있고 아래에 곰과 토끼 인형이 쌓여 있어요" width="720" height="1280" loading="lazy"></div>
-    </div>
-    <div class="txt">
-      <p class="eyebrow">집게</p>
-      <h2 class="big">진짜 기계처럼<br>흔들리는 집게</h2>
-      <p>조이스틱으로 집게를 움직이고, 버튼을 눌러 내려서 귀여운 인형을 출구까지 옮겨 보세요. 집게는 움직이면 진자처럼 흔들리고, 인형이 무거울수록 힘이 더 필요해요.</p>
-      <p>같은 조작이면 같은 결과예요. 인형 배치와 집게 힘, 보상에 무작위 요소가 없어서 실력과 판단으로 도전하는 게임이에요.</p>
-    </div>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="wrap split rev">
-    <div class="txt">
-      <p class="eyebrow">수집</p>
-      <h2 class="big">뽑을수록<br>채워지는 도감</h2>
-      <p>곰, 토끼, 펭귄&hellip; 폭신한 인형들이 한 판마다 기다리고 있어요. 얻은 인형은 도감에 모이고, 인형마다 ★ 등급이 표시돼요. 등급은 수집용 표시이고 게임 결과와는 관계없어요.</p>
-      <p>나라의 마지막 스테이지에는 덩치 큰 보스 인형이 나와요.</p>
-    </div>
-    <div class="vis duo">
-      <div class="phone"><img src="/assets/img/home-menu.webp" alt="게임 첫 화면: 곰, 토끼, 펭귄 인형이 든 기계와 게임 시작 버튼" width="540" height="960" loading="lazy"></div>
-      <div class="phone lift"><img src="/assets/img/collection.webp" alt="도감 화면: 얻은 인형 카드가 등급 배지와 함께 모여 있어요" width="540" height="960" loading="lazy"></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="wrap split">
-    <div class="vis">
-      <div class="phone"><img src="/assets/img/stage-road.webp" alt="한국 스테이지 길: 번호가 붙은 스테이지가 길로 이어지고 별이 표시돼요" width="540" height="960" loading="lazy"></div>
-    </div>
-    <div class="txt">
-      <p class="eyebrow">여행</p>
-      <h2 class="big">나라마다 20스테이지,<br>계속 늘어나요</h2>
-      <p>스테이지마다 목표 인형이 있고, 채우면 클리어예요. 별은 사용한 판 수가 적을수록 더 많이 받아요. 한국 다음 나라는 앞 나라를 클리어하거나 국가 해금권을 구매하면 입장할 수 있어요.</p>
-      <ol class="flags" aria-label="나라 목록">
-        <li>한국</li><li>일본</li><li>프랑스</li><li>미국</li><li>브라질</li><li>호주</li><li>뉴질랜드</li><li>캐나다</li><li class="more">새 나라 계속 추가</li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="wrap">
-    <p class="eyebrow">그리고</p>
-    <h2 class="big wide">가볍게 시작해서, 끝까지 즐겁게</h2>
-    <ul class="points">
-      <li><span class="inline-h">바로 시작</span>로그인 없이 설치하고 바로 플레이해요.</li>
-      <li><span class="inline-h">이어서 하기</span>나가도 남은 판은 보관돼서 다시 들어오면 이어서 해요.</li>
-      <li><span class="inline-h">퀘스트와 출석</span>퀘스트, 출석 보상, 시간이 지나며 차오르는 코인으로 코인을 모아요.</li>
-      <li><span class="inline-h">내게 맞는 화질</span>기기 사양에 맞춰 그래픽 품질을 설정에서 바꿔요.</li>
-    </ul>
-  </div>
-</section>
-
-<section class="sec last end">
-  <div class="wrap center">
-    <img class="app-icon" src="/assets/img/icon-192.png" alt="" width="96" height="96" loading="lazy">
-    <h2 class="big">한 판만 더,<br>하게 될걸요</h2>
-    <p class="cta-row"><span class="btn static" data-cta>2026년 11월 24일 출시</span></p>
-    <p class="fine">Android &middot; 광고 포함 &middot; 앱 내 구매 있음</p>
-  </div>
-</section>
-
+<main>
+<h1>새 주소로 이동합니다</h1>
+<p>한 판 더! 인형뽑기 공식 사이트가 새 주소로 옮겼어요.<br>자동으로 이동하지 않으면 아래 주소를 눌러 주세요.</p>
+<p><a href="https://onemoregrab.github.io/">https://onemoregrab.github.io/</a></p>
 </main>
-<footer class="foot">
-  <div class="wrap foot-grid">
-    <div>
-      <p class="foot-brand">한 판 더! 인형뽑기</p>
-      <p class="foot-note">이 게임은 광고를 포함하며 앱 내 구매가 있어요. 게임 코인은 게임 안에서만 쓰는 가상 재화이고, 실제 인형은 배송되지 않아요.</p>
-    </div>
-    <nav class="foot-links" aria-label="약관과 정책">
-      <a href="/omg-policy/terms.html">이용약관</a>
-      <a href="/omg-policy/privacy.html">개인정보처리방침</a>
-      <a href="/omg-policy/refund.html">환불정책</a>
-      <a href="/omg-policy/delete.html">데이터 삭제 요청</a>
-    </nav>
-  </div>
-  <div class="wrap biz">
-    <p>상호 NJ STudio &middot; 대표자 김종욱 &middot; 사업자등록번호 840-37-01529 &middot; 통신판매업 신고번호 2026-서울강동-1664</p>
-    <details>
-      <summary>더보기</summary>
-      <p>주소 서울특별시 강동구 성내로15길 64-11 &middot; 전화 010-9426-4567 &middot; 이메일 <a href="mailto:njstudio0603@gmail.com">njstudio0603@gmail.com</a></p>
-    </details>
-    <p class="copy">&copy; 2026 NJ STudio</p>
-  </div>
-</footer>
-
-<script src="/assets/config.js"></script>
-<script src="/assets/site.js" defer></script>
-<script src="/assets/hero.js" defer></script>
 </body>
 </html>
