@@ -28,6 +28,13 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu.open) { menu.open = false; var sm = menu.querySelector('summary'); if (sm) sm.focus() } })
   }
 
+  // 주소의 #앵커가 가리키는 토글(고객문의)은 열어서 보여 준다
+  function openHash() {
+    var el = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)))
+    if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView() }
+  }
+  openHash(); window.addEventListener('hashchange', openHash)
+
   // 복사 버튼 (환불 신청 메일 양식)
   document.addEventListener('click', function (e) {
     var b = e.target.closest ? e.target.closest('.cp') : null
