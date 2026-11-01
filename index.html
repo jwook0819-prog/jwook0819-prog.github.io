@@ -1,7 +1,153 @@
-<!DOCTYPE html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>한 판 더! 인형뽑기 (One More Grab)</title>
-<style>body{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:#EDE4FF;color:#2B1E4A;margin:0;padding:40px 20px;text-align:center}a{color:#5a2fe0;display:block;margin:12px 0;font-size:1.1rem}</style></head>
-<body><h1>한 판 더! 인형뽑기</h1><p>One More Grab</p>
-<a href="https://jwook0819-prog.github.io/omg-policy/privacy.html">개인정보처리방침</a>
-<a href="https://jwook0819-prog.github.io/omg-policy/delete.html">데이터 삭제 요청</a>
-</body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>한 판 더! 인형뽑기 — 흔들리는 집게의 3D 물리 인형뽑기</title>
+<meta name="description" content="귀여운 인형을 집게로 뽑아 모으는 3D 물리 인형뽑기. 한국·일본·프랑스·미국·브라질·호주·뉴질랜드·캐나다 8개 나라, 나라마다 20스테이지.">
+<link rel="canonical" href="https://jwook0819-prog.github.io/">
+<meta name="theme-color" content="#0E0A1F">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="한 판 더! 인형뽑기 — 흔들리는 집게의 3D 물리 인형뽑기">
+<meta property="og:description" content="귀여운 인형을 집게로 뽑아 모으는 3D 물리 인형뽑기. 한국·일본·프랑스·미국·브라질·호주·뉴질랜드·캐나다 8개 나라, 나라마다 20스테이지.">
+<meta property="og:url" content="https://jwook0819-prog.github.io/">
+<meta property="og:image" content="https://jwook0819-prog.github.io/assets/img/icon-512.png">
+<link rel="icon" type="image/png" href="/assets/img/icon-192.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/jua-site.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="top">
+  <a class="brand" href="/"><img src="/assets/img/icon-192.png" alt="" width="40" height="40"><span>한 판 더!</span></a>
+  <nav class="nav" aria-label="주 메뉴">
+    <a href="/game/">게임 소개</a>
+    <a href="/notice/">공지</a>
+    <a href="/support/">고객센터</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1 class="display">한 판 더!</h1>
+      <p class="lead">귀여운 인형을 집게로 뽑아 모으는<br>3D 물리 인형뽑기</p>
+      <p class="cta-row">
+        <span class="btn static" id="cta">2026년 11월 24일 출시</span>
+        <a class="ghost" href="/game/">게임 소개</a>
+        <a class="ghost" href="/support/">고객센터</a>
+      </p>
+      <p class="fine">Android &middot; 광고 포함 &middot; 앱 내 구매 있음</p>
+    </div>
+    <div class="hero-vis">
+      <canvas id="hero-canvas" role="img" aria-label="별빛 입자로 그린 그림: 집게가 내려와 곰 인형을 집어 올려요"></canvas>
+      <noscript><img src="/assets/img/icon-512.png" alt="한 판 더! 인형뽑기 앱 아이콘: 금색 집게와 곰 인형" width="320" height="320"></noscript>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap split">
+    <div class="vis">
+      <img class="phone" src="/assets/img/play-korea.webp" alt="한국 스테이지 플레이 화면: 집게가 매달려 있고 아래에 곰과 토끼 인형이 쌓여 있어요" width="720" height="1280" loading="lazy">
+    </div>
+    <div class="txt">
+      <h2 class="big">진짜 기계처럼<br>흔들리는 집게</h2>
+      <p>조이스틱으로 집게를 움직이고, 버튼을 눌러 내려서 귀여운 인형을 출구까지 옮겨 보세요. 집게는 움직이면 진자처럼 흔들리고, 인형이 무거울수록 힘이 더 필요해요.</p>
+      <p>같은 조작이면 같은 결과예요. 인형 배치와 집게 힘, 보상에 무작위 요소가 없어서 실력과 판단으로 도전하는 게임이에요.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap split">
+    <div class="txt">
+      <h2 class="big">8개 나라,<br>나라마다 20스테이지</h2>
+      <p>스테이지마다 목표 인형이 있고, 채우면 클리어예요. 나라의 마지막 스테이지에는 보스 인형이 나와요. 별은 사용한 판 수가 적을수록 더 많이 받아요.</p>
+      <p>한국 다음 나라는 앞 나라를 클리어하거나 국가 해금권을 구매하면 입장할 수 있어요.</p>
+      <p><a class="ghost" href="/game/">자세히 보기</a></p>
+    </div>
+    <ol class="countries" aria-label="나라 목록">
+      <li><span class="no">01</span><span class="nm">한국</span><span class="st">20스테이지</span></li>
+      <li><span class="no">02</span><span class="nm">일본</span><span class="st">20스테이지</span></li>
+      <li><span class="no">03</span><span class="nm">프랑스</span><span class="st">20스테이지</span></li>
+      <li><span class="no">04</span><span class="nm">미국</span><span class="st">20스테이지</span></li>
+      <li><span class="no">05</span><span class="nm">브라질</span><span class="st">20스테이지</span></li>
+      <li><span class="no">06</span><span class="nm">호주</span><span class="st">20스테이지</span></li>
+      <li><span class="no">07</span><span class="nm">뉴질랜드</span><span class="st">20스테이지</span></li>
+      <li><span class="no">08</span><span class="nm">캐나다</span><span class="st">20스테이지</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap split">
+    <div class="txt">
+      <h2 class="big">모을수록<br>채워져요</h2>
+    </div>
+    <div class="txt plain">
+      <p><span class="inline-h">도감</span> 얻은 인형은 도감에 모이고, 인형마다 ★ 등급이 표시돼요. 등급은 수집용 표시이고 게임 결과와는 관계없어요.</p>
+      <p><span class="inline-h">퀘스트와 출석</span> 퀘스트, 출석 보상, 시간이 지나면 조금씩 차오르는 코인으로 코인을 모을 수 있어요.</p>
+      <p><span class="inline-h">바로 시작</span> 로그인 없이 바로 시작할 수 있어요.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap split">
+    <div class="txt">
+      <h2 class="big">알려드려요</h2>
+      <p><a class="ghost" href="/notice/">공지 모두 보기</a></p>
+    </div>
+    <ul class="notices" id="home-notices" data-limit="3" aria-live="polite">
+      <li class="muted">불러오는 중이에요…</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec last">
+  <div class="wrap split">
+    <div class="txt">
+      <h2 class="big">도움이<br>필요하세요?</h2>
+    </div>
+    <ul class="biglinks">
+      <li><a href="/support/#refund">환불 신청 메일 양식</a></li>
+      <li><a href="/support/#faq">구매 복원 · 자주 묻는 질문</a></li>
+      <li><a href="/omg-policy/delete.html">데이터 삭제 요청</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <p class="foot-brand">한 판 더! 인형뽑기</p>
+      <p class="foot-note">이 게임은 광고를 포함하며 앱 내 구매가 있어요. 게임 코인은 게임 안에서만 쓰는 가상 재화이고, 실제 인형은 배송되지 않아요.</p>
+    </div>
+    <nav class="foot-links" aria-label="약관과 정책">
+      <a href="/support/">고객센터</a>
+      <a href="/omg-policy/terms.html">이용약관</a>
+      <a href="/omg-policy/privacy.html">개인정보처리방침</a>
+      <a href="/omg-policy/refund.html">환불정책</a>
+      <a href="/omg-policy/delete.html">데이터 삭제 요청</a>
+    </nav>
+  </div>
+  <div class="wrap biz">
+    <p>상호 NJ STudio &middot; 대표자 김종욱 &middot; 사업자등록번호 840-37-01529 &middot; 통신판매업 신고번호 2026-서울강동-1664</p>
+    <details>
+      <summary>연락처·사업장 주소</summary>
+      <p>주소 서울특별시 강동구 성내로15길 64-11 &middot; 전화 010-9426-4567 &middot; 이메일 <a href="mailto:njstudio0603@gmail.com">njstudio0603@gmail.com</a></p>
+    </details>
+    <p class="copy">&copy; 2026 NJ STudio</p>
+  </div>
+</footer>
+
+<script src="/assets/config.js"></script>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/hero.js" defer></script>
+</body>
+</html>
