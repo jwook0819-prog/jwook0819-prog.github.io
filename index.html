@@ -59,12 +59,41 @@
           <linearGradient id="rod" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#B9A6F5"/><stop offset=".5" stop-color="#F1EAFF"/><stop offset="1" stop-color="#B9A6F5"/></linearGradient>
           <linearGradient id="fadeG" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="80"><stop offset="0" stop-color="#000"/><stop offset="1" stop-color="#fff"/></linearGradient>
           <mask id="topfade" maskUnits="userSpaceOnUse" x="-300" y="-900" width="1000" height="1800"><rect x="-300" y="-900" width="1000" height="1800" fill="url(#fadeG)"/></mask>
+          <radialGradient id="whiteB" cx=".5" cy=".35" r=".75"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7DEFF"/></radialGradient>
+          <radialGradient id="blk" cx=".4" cy=".25" r=".9"><stop offset="0" stop-color="#4A4170"/><stop offset="1" stop-color="#1B1530"/></radialGradient>
+          <!-- 토끼: 발 밑 중앙이 (0,0) -->
+          <g id="rabbit">
+            <ellipse cx="-17" cy="-114" rx="10.5" ry="31" transform="rotate(-9 -17 -114)" fill="url(#lav)"/><ellipse cx="-17" cy="-112" rx="5" ry="21" transform="rotate(-9 -17 -112)" fill="#F7A9C4"/>
+            <ellipse cx="17" cy="-114" rx="10.5" ry="31" transform="rotate(9 17 -114)" fill="url(#lav)"/><ellipse cx="17" cy="-112" rx="5" ry="21" transform="rotate(9 17 -112)" fill="#F7A9C4"/>
+            <ellipse cx="-35" cy="-40" rx="9" ry="19" transform="rotate(14 -35 -40)" fill="url(#lav)"/><ellipse cx="35" cy="-40" rx="9" ry="19" transform="rotate(-14 35 -40)" fill="url(#lav)"/>
+            <ellipse cx="0" cy="-40" rx="37" ry="41" fill="url(#lav)"/><ellipse cx="0" cy="-33" rx="23" ry="29" fill="url(#whiteB)"/>
+            <ellipse cx="-19" cy="-4" rx="17" ry="9" fill="url(#whiteB)"/><ellipse cx="19" cy="-4" rx="17" ry="9" fill="url(#whiteB)"/>
+            <circle cx="0" cy="-86" r="35" fill="url(#lav)"/><ellipse cx="-4" cy="-112" rx="12" ry="5.5" fill="#FFE59A" opacity=".85" transform="rotate(-8 -4 -112)"/>
+            <circle cx="-23" cy="-76" r="9" fill="url(#cheek)"/><circle cx="23" cy="-76" r="9" fill="url(#cheek)"/>
+            <ellipse cx="0" cy="-75" rx="14" ry="10" fill="url(#whiteB)"/>
+            <ellipse cx="-13" cy="-88" rx="5" ry="6.4" fill="#2A170F"/><ellipse cx="13" cy="-88" rx="5" ry="6.4" fill="#2A170F"/><circle cx="-11.3" cy="-90.4" r="2" fill="#fff"/><circle cx="14.7" cy="-90.4" r="2" fill="#fff"/>
+            <ellipse cx="0" cy="-79" rx="3.6" ry="2.7" fill="#F2819F"/><path d="M0 -76v3M0 -73q-4 4-8 1M0 -73q4 4 8 1" fill="none" stroke="#7A4A5A" stroke-width="1.6" stroke-linecap="round"/>
+          </g>
+          <!-- 펭귄 -->
+          <g id="penguin">
+            <ellipse cx="-17" cy="-3" rx="15" ry="7" fill="#FFB224"/><ellipse cx="17" cy="-3" rx="15" ry="7" fill="#FFB224"/>
+            <ellipse cx="-40" cy="-52" rx="9" ry="26" transform="rotate(18 -40 -52)" fill="url(#blk)"/><ellipse cx="40" cy="-52" rx="9" ry="26" transform="rotate(-18 40 -52)" fill="url(#blk)"/>
+            <ellipse cx="0" cy="-48" rx="38" ry="46" fill="url(#blk)"/><ellipse cx="0" cy="-40" rx="26" ry="35" fill="url(#whiteB)"/>
+            <circle cx="0" cy="-92" r="30" fill="url(#blk)"/>
+            <circle cx="-14" cy="-95" r="9" fill="#fff"/><circle cx="14" cy="-95" r="9" fill="#fff"/><circle cx="-13" cy="-95" r="4.6" fill="#120D20"/><circle cx="15" cy="-95" r="4.6" fill="#120D20"/><circle cx="-11.5" cy="-97.5" r="1.8" fill="#fff"/><circle cx="16.5" cy="-97.5" r="1.8" fill="#fff"/>
+            <circle cx="-25" cy="-82" r="7" fill="url(#cheek)"/><circle cx="25" cy="-82" r="7" fill="url(#cheek)"/>
+            <path d="M-7 -85q7-3 14 0q-3 9-7 9q-4 0-7-9z" fill="#FFB224"/>
+          </g>
           <path id="star" d="M0-1 .28-.28 1 0 .28.28 0 1-.28.28-1 0-.28-.28Z"/>
         </defs>
 
         <circle class="halo" cx="200" cy="400" r="190" fill="url(#glow)"/>
         <ellipse cx="200" cy="560" rx="170" ry="22" fill="#05030F" opacity=".45"/>
 
+        <g class="pile back">
+          <g class="bob b1"><use href="#rabbit" transform="translate(58 538) scale(.82)"/></g>
+          <g class="bob b2"><use href="#penguin" transform="translate(344 536) scale(.82)"/></g>
+        </g>
         <g class="bear-lift"><g class="sway">
           <circle cx="146" cy="322" r="27" fill="url(#furB)"/><circle cx="146" cy="324" r="14" fill="#F59BB8"/><circle cx="143" cy="320" r="7" fill="#FFC1D3" opacity=".7"/>
           <circle cx="254" cy="322" r="27" fill="url(#furB)"/><circle cx="254" cy="324" r="14" fill="#F59BB8"/><circle cx="251" cy="320" r="7" fill="#FFC1D3" opacity=".7"/>
@@ -85,16 +114,12 @@
         </g></g>
 
         <g class="pile">
-          <g class="bob b1"><ellipse cx="50" cy="498" rx="12" ry="32" transform="rotate(-14 50 498)" fill="url(#lav)"/><ellipse cx="50" cy="500" rx="5.5" ry="21" transform="rotate(-14 50 500)" fill="#F7A9C4"/>
-            <ellipse cx="110" cy="498" rx="12" ry="32" transform="rotate(14 110 498)" fill="url(#lav)"/><ellipse cx="110" cy="500" rx="5.5" ry="21" transform="rotate(14 110 500)" fill="#F7A9C4"/>
-            <circle cx="80" cy="540" r="46" fill="url(#lav)"/><circle cx="62" cy="540" r="5.5" fill="#2A170F"/><circle cx="98" cy="540" r="5.5" fill="#2A170F"/><circle cx="64" cy="538" r="1.8" fill="#fff"/><circle cx="100" cy="538" r="1.8" fill="#fff"/>
-            <circle cx="52" cy="552" r="8" fill="#FF8FB8" opacity=".65"/><circle cx="108" cy="552" r="8" fill="#FF8FB8" opacity=".65"/><ellipse cx="80" cy="549" rx="4" ry="3" fill="#F2819F"/></g>
-          <g class="bob b2"><circle cx="352" cy="556" r="42" fill="#241E3D" stroke="#4A3F7A" stroke-width="2.5"/><ellipse cx="352" cy="566" rx="28" ry="26" fill="#FFF7EA"/>
-            <circle cx="337" cy="545" r="5.5" fill="#fff"/><circle cx="367" cy="545" r="5.5" fill="#fff"/><circle cx="338" cy="546" r="3" fill="#120D20"/><circle cx="366" cy="546" r="3" fill="#120D20"/>
-            <path d="M346 555h12l-6 8z" fill="#FFB224"/></g>
-          <g class="bob b3"><ellipse cx="258" cy="520" rx="11" ry="30" transform="rotate(-10 258 520)" fill="url(#lav)"/><ellipse cx="258" cy="522" rx="5" ry="19" transform="rotate(-10 258 522)" fill="#F7A9C4"/>
-            <ellipse cx="298" cy="520" rx="11" ry="30" transform="rotate(10 298 520)" fill="url(#lav)"/><ellipse cx="298" cy="522" rx="5" ry="19" transform="rotate(10 298 522)" fill="#F7A9C4"/>
-            <circle cx="278" cy="562" r="40" fill="url(#lav)"/><circle cx="264" cy="560" r="5" fill="#2A170F"/><circle cx="292" cy="560" r="5" fill="#2A170F"/><circle cx="266" cy="558" r="1.6" fill="#fff"/><circle cx="294" cy="558" r="1.6" fill="#fff"/><ellipse cx="278" cy="569" rx="3.6" ry="2.8" fill="#F2819F"/></g>
+          <ellipse cx="200" cy="574" rx="210" ry="30" fill="#0B0720" opacity=".55"/>
+          <g class="bob b3"><use href="#rabbit" transform="translate(112 584)"/></g>
+          <g class="bob b2"><use href="#penguin" transform="translate(300 586)"/></g>
+          <g class="bob b1"><use href="#rabbit" transform="translate(212 606) scale(.7)"/></g>
+          <g class="bob b3"><use href="#rabbit" transform="translate(372 590) scale(.62)"/></g>
+          <g class="bob b1"><use href="#penguin" transform="translate(28 590) scale(.62)"/></g>
         </g>
 
         <g mask="url(#topfade)"><g class="swing"><g class="drop">
