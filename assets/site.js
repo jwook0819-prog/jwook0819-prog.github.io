@@ -4,15 +4,28 @@
 
   // 출시 버튼: config.js 의 launched 가 true 면 Google Play 링크 버튼으로 바꾼다
   var cfg = window.OMG || {}
-  var cta = document.getElementById('cta')
-  if (cta && cfg.launched && /^https:\/\/play\.google\.com\//.test(cfg.playUrl || '')) {
-    var a = document.createElement('a')
-    a.className = 'btn'
-    a.id = 'cta'
-    a.href = cfg.playUrl
-    a.rel = 'noopener'
-    a.textContent = 'Google Play에서 받기'
-    cta.replaceWith(a)
+  var ctas = document.querySelectorAll('[data-cta]')
+  if (cfg.launched && /^https:\/\/play\.google\.com\//.test(cfg.playUrl || '')) {
+    Array.prototype.forEach.call(ctas, function (cta) {
+      var a = document.createElement('a')
+      a.className = 'btn'
+      if (cta.id) a.id = cta.id
+      a.setAttribute('data-cta', '')
+      a.href = cfg.playUrl
+      a.rel = 'noopener'
+      a.textContent = 'Google Play에서 받기'
+      cta.replaceWith(a)
+    })
+  }
+
+  // 우측 상단 메뉴: 바깥을 누르거나 Esc 를 누르거나 항목을 고르면 닫는다
+  var menu = document.getElementById('menu')
+  if (menu) {
+    document.addEventListener('click', function (e) {
+      if (!menu.open) return
+      if (!menu.contains(e.target) || (e.target.closest && e.target.closest('.menu-panel a'))) menu.open = false
+    })
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu.open) { menu.open = false; var sm = menu.querySelector('summary'); if (sm) sm.focus() } })
   }
 
   // 복사 버튼 (환불 신청 메일 양식)
