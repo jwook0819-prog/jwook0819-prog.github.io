@@ -73,6 +73,7 @@ a:hover { color: #fff; }
   animation: spin 90s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(16px, 4vw, 64px); align-items: center; }
+.display .sub { display: block; font-size: .34em; letter-spacing: 0; margin-top: .22em; text-shadow: none; color: var(--gold); }
 .eyebrow { margin: 0 0 14px; font: 400 18px/1 var(--display); letter-spacing: .06em; color: var(--gold); }
 .display { margin: 0; font: 400 clamp(68px, 10.4vw, 140px)/1 var(--display); letter-spacing: -.03em; color: #fff; white-space: nowrap; text-shadow: 0 6px 0 #5B3AD1, 0 0 60px rgba(150, 105, 255, .45); }
 .lead { margin: 24px 0 0; font-size: clamp(18px, 2.2vw, 22px); line-height: 1.6; color: var(--text); max-width: 30em; }
@@ -124,6 +125,7 @@ a:hover { color: #fff; }
 
 .flags { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0 0; padding: 0; }
 .flags li { font: 400 20px/1 var(--display); color: #fff; padding: 11px 18px; border-radius: 999px; background: rgba(122, 77, 255, .28); border: 1px solid rgba(169, 139, 255, .4); }
+.flags li.more { background: transparent; border-style: dashed; color: var(--muted); font-size: 16px; }
 .flags li:first-child { background: var(--gold); color: #2A1B00; border-color: transparent; }
 .big.wide { max-width: 16em; margin-bottom: 40px; }
 .points { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; }
