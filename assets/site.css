@@ -79,35 +79,9 @@ a:hover { color: #fff; }
 .lead { margin: 24px 0 0; font-size: clamp(18px, 2.2vw, 22px); line-height: 1.6; color: var(--text); max-width: 30em; }
 .cta-row { margin: 36px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; }
 .fine { margin: 20px 0 0; font-size: 14px; color: var(--muted); }
-.hero-vis { position: relative; aspect-ratio: 400 / 580; width: 100%; max-height: 84vh; justify-self: center; }
-.scene { width: 100%; height: 100%; display: block; overflow: visible; }
-
-/* 장면 움직임: 10초 한 바퀴. 집게가 내려와 → 오므려 집고 → 곰을 들어 올렸다가 → 내려놓고 → 올라가요. */
-.scene .swing, .scene .drop, .scene .bear-lift, .scene .sway, .scene .armR, .scene .sp, .scene .bob, .scene .blink, .scene .halo { transform-box: view-box; }
-.swing { transform-origin: 200px -60px; animation: swing 10s infinite; }
-.drop { transform: translateY(20px); animation: drop 10s infinite ease-in-out; }
-.bear-lift { transform: translateY(-130px); animation: lift 10s infinite ease-in-out; }
-.sway { transform-origin: 200px 300px; animation: sway 10s infinite ease-in-out; }
-.armR { transform-origin: 0 0; transform: rotate(17deg); animation: arm 10s infinite ease-in-out; }
-.arm-o, .arm-g, .arm-h { fill: none; stroke-linecap: round; }
-.arm-o { stroke: #8A4F00; stroke-width: 17; }
-.arm-g { stroke: #FFC53D; stroke-width: 12; }
-.arm-h { stroke: #FFF3B8; stroke-width: 3.2; opacity: .85; }
-.blink { transform-origin: 200px 352px; animation: blink 4.6s infinite; }
-.bob { transform-origin: 200px 580px; animation: bob 3.6s ease-in-out infinite; }
-.b2 { animation-delay: -1.2s; } .b3 { animation-delay: -2.1s; }
-.halo { transform-origin: 200px 400px; animation: halo 5s ease-in-out infinite; }
-.sp { transform: scale(0); animation: sparkle 10s infinite; }
-.s2 { animation-delay: .25s; } .s3 { animation-delay: .5s; } .s4 { animation-delay: .15s; } .s5 { animation-delay: .4s; }
-@keyframes drop { 0% { transform: translateY(0); } 14%, 26% { transform: translateY(150px); } 50%, 64% { transform: translateY(20px); } 76%, 82% { transform: translateY(150px); } 100% { transform: translateY(0); } }
-@keyframes lift { 0%, 26% { transform: translateY(0); } 50%, 64% { transform: translateY(-130px); } 76%, 100% { transform: translateY(0); } }
-@keyframes sway { 0%, 26% { transform: rotate(0); } 36% { transform: rotate(-3.5deg); } 46% { transform: rotate(3deg); } 56% { transform: rotate(-2deg); } 66%, 100% { transform: rotate(0); } }
-@keyframes arm { 0%, 14% { transform: rotate(-3deg); } 25%, 76% { transform: rotate(17deg); } 85%, 100% { transform: rotate(-3deg); } }
-@keyframes swing { 0%, 100% { transform: rotate(0); } 4% { transform: rotate(2.2deg); } 9% { transform: rotate(-1.6deg); } 13%, 70% { transform: rotate(0); } 80% { transform: rotate(1.6deg); } 90% { transform: rotate(-1.2deg); } }
-@keyframes blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
-@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
-@keyframes halo { 0%, 100% { opacity: .75; transform: scale(1); } 50% { opacity: 1; transform: scale(1.06); } }
-@keyframes sparkle { 0%, 49% { transform: scale(0) rotate(0); } 54% { transform: scale(1.25) rotate(20deg); } 62% { transform: scale(1) rotate(0); } 70%, 100% { transform: scale(0); } }
+.hero-vis { position: relative; aspect-ratio: 400 / 620; width: 100%; max-height: 84vh; justify-self: center; }
+.hero-vis canvas { width: 100%; height: 100%; display: block; }
+.hero-vis noscript img { display: block; margin: 0 auto; border-radius: var(--r); }
 
 /* 구간: 좌우 번갈아 놓는 두 단 */
 .sec { padding: clamp(64px, 11vw, 140px) 0; }
@@ -200,7 +174,7 @@ pre.ex { opacity: .85; user-select: text; -webkit-user-select: text; }
   .split .vis { order: 0; }
   .brand { font-size: 23px; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } .sp { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
 
 /* 고객문의: 항목별 토글 */
 .tg { border-bottom: 1px solid var(--line); max-width: 44em; }
