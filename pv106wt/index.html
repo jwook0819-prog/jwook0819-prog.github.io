@@ -261,7 +261,7 @@
 
 <script>
 window.__errs=[];
-window.addEventListener('error',function(e){window.__errs.push('ERR '+e.message+' @'+(e.filename||'')+':'+e.lineno)});
+window.addEventListener('error',function(e){var t=e.target;window.__errs.push('ERR '+(e.message||'')+' @'+(e.filename||'')+':'+e.lineno+' tgt='+(t&&t.tagName?t.tagName+' '+(t.src||t.href||''):''))},true);
 window.addEventListener('unhandledrejection',function(e){window.__errs.push('REJ '+String((e.reason&&e.reason.message)||e.reason))});
 setInterval(function(){var d=document.getElementById('__diag');if(!d){d=document.createElement('div');d.id='__diag';d.style.cssText='position:fixed;left:0;bottom:0;z-index:99999;background:#fff4;color:#fff;font:12px monospace;max-width:100%;white-space:pre-wrap';document.body.appendChild(d);}d.textContent=(window.__errs||[]).join(' || ');},700);
 </script>
