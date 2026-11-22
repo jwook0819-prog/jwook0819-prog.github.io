@@ -12,4 +12,7 @@
   ['pass','c','lang','intro'].forEach(function(k){ if(p.get(k)) args.push(k+'='+encodeURIComponent(p.get(k))); });
   document.getElementById('g').src = 'index.html' + (args.length ? '?' + args.join('&') : '');
 </script>
-</body></html>
+<div id="iframeLog" style="position:absolute;right:0;top:0;width:900px;color:#0f0;font:12px monospace;white-space:pre-wrap;z-index:9"></div>
+<script>
+setInterval(function(){ try{ var d=document.getElementById('g').contentDocument; if(!d) return; document.getElementById('iframeLog').textContent = d.title + '\n' + (d.body? d.body.innerText.slice(0,300):''); }catch(e){} }, 800);
+</script></body></html>

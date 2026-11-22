@@ -226,6 +226,16 @@
   } catch (e) {}
 })()
 </script>
+
+<script>
+window.__log=[];
+(function(){
+  function push(t){ window.__log.push(t); try{ document.title = 'ERR ' + window.__log.join(' || ').slice(0,300) }catch(e){} }
+  window.addEventListener('error', function(e){ push('error: '+(e.message||'')+' @'+(e.filename||'')+':'+e.lineno) }, true);
+  window.addEventListener('unhandledrejection', function(e){ push('rej: '+String((e.reason&&e.reason.message)||e.reason)) });
+  var oe=console.error; console.error=function(){ push('CE '+Array.prototype.map.call(arguments, function(a){ return (a&&a.message)?a.message:String(a) }).join(' ')); return oe.apply(console, arguments) };
+})();
+</script>
 </head>
   <body>
     <!-- 아이콘 모음 (SVG, 진보라 네이비 외곽선). <use href="#i-..."> 로 쓴다 -->
