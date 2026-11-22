@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><title>seed</title></head><body>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search)
+  var c = q.get('c') || 'japan', lang = q.get('lang') || 'ko'
+  var CIDS = ['korea','japan','france','usa','brazil','australia','newzealand','canada']
+  var per = function (f) { var o = {}; CIDS.forEach(function (id) { o[id] = f(id) }); return o }
+  var idx = CIDS.indexOf(c)
+  var stars = new Array(20).fill(0)
+  for (var j = 0; j < 19; j++) stars[j] = 3
+  var progress = per(function (id) { var k = CIDS.indexOf(id); return { stars: k < idx ? new Array(20).fill(3) : (k === idx ? stars.slice() : new Array(20).fill(0)) } })
+  // 도감: 일본 6종 보유 상태(모찌몽·달마 오뚝이·여우 코코·너구리 폰타·코이 잉어·황금 복냥이 대장). 수량·조각은 실제 획득 흐름과 같은 모양
+  var collection = {}
+  if (q.get('dex') === '1') {
+    var jp = { mochi: 9, daruma: 6, fox: 4, tanuki: 3, koi: 2, neko: 1 }
+    Object.keys(jp).forEach(function (id, i) {
+      collection[id] = { count: jp[id], shards: i < 4 ? jp[id] * 2 : 0, enhance: 0, seen: true, new: false }
+    })
+  }
+  var save = {
+    version: 5, createdAt: Date.now(), coins: 9000, paid: [], inserted: 0, insertedFor: '',
+    stageLeft: per(function () { return {} }), lastRefill: Date.now(), progress: progress,
+    countries: per(function (id) { return { cleared: CIDS.indexOf(id) < idx, rewarded: true, stamp: true, clearedAt: 0 } }),
+    stageKept: per(function () { return {} }), stagePlays: per(function () { return {} }),
+    collection: collection, dexClaimed: per(function () { return false }),
+    settings: { quality: 'high', qualityManual: true, perfLevel: 3, lang: lang, vibration: false, music: false, sfx: false },
+    tutorialDone: true, fxIntroSeen: CIDS.slice()
+  }
+  localStorage.setItem('omg_test_gate_pass', '0819')
+  localStorage.setItem('omg_save_bak', JSON.stringify(save))
+  localStorage.setItem('omg_save', JSON.stringify(save))
+  if (q.get('stay')) {
+    document.body.innerHTML = '<pre style="font:12px monospace">seeded ' + c + ' dex=' + (q.get('dex') === '1') + '</pre>'
+    return
+  }
+  location.replace('shot.html?pass=0819&lang=' + encodeURIComponent(lang))
+})()
+</script></body></html>
