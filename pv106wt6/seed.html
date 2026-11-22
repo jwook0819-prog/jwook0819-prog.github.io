@@ -9,11 +9,11 @@
   var idx = CIDS.indexOf(c)
   var stars = new Array(20).fill(0)
   for (var j = 0; j < 19; j++) stars[j] = 3
-  var progress = per(function (id) { return { stars: CIDS.indexOf(id) === idx ? stars.slice() : new Array(20).fill(3) } })
+  var progress = per(function (id) { var k = CIDS.indexOf(id); return { stars: k < idx ? new Array(20).fill(3) : (k === idx ? stars.slice() : new Array(20).fill(0)) } })
   var save = {
     version: 5, createdAt: Date.now(), coins: 9000, paid: [], inserted: 0, insertedFor: '',
     stageLeft: per(function () { return {} }), lastRefill: Date.now(), progress: progress,
-    countries: per(function () { return { cleared: false, rewarded: true, stamp: true, clearedAt: 0 } }),
+    countries: per(function (id) { return { cleared: CIDS.indexOf(id) < idx, rewarded: true, stamp: true, clearedAt: 0 } }),
     stageKept: per(function () { return {} }), stagePlays: per(function () { return {} }),
     collection: {}, dexClaimed: per(function () { return false }),
     settings: { quality: 'high', qualityManual: true, perfLevel: 3, lang: lang, vibration: false, music: false, sfx: false },
