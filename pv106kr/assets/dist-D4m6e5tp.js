@@ -1,1 +1,0 @@
-export{r as CapacitorHttp}from"./dist-By7OHDu7.js";
