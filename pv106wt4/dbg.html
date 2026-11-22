@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"><body style="font:14px monospace;white-space:pre-wrap;background:#fff;color:#000"><div id="o">...</div>
+<script>
+var s = localStorage.getItem('omg_save');
+try { var j = JSON.parse(s); document.getElementById('o').textContent =
+  'len='+(s||'').length+'\nversion='+j.version+'\ncoins='+j.coins+'\nkoreaStars='+JSON.stringify((j.progress&&j.progress.korea&&j.progress.korea.stars)||null)+'\nlang='+(j.settings&&j.settings.lang)+'\ntutorialDone='+j.tutorialDone+' keys='+Object.keys(j).join(','); }
+catch(e){ document.getElementById('o').textContent = 'ERR '+e.message+' raw='+(s||'').slice(0,200) }
+</script></body>
