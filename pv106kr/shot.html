@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><title>shot</title>
+<style>
+  html,body{margin:0;padding:0;background:#0b0b12;overflow:hidden}
+  #wrap{position:absolute;left:0;top:0;width:480px;height:1040px;transform-origin:0 0}
+  iframe{width:480px;height:1040px;border:0;display:block;background:#0b0b12}
+</style></head>
+<body><div id="wrap"><iframe id="g"></iframe></div>
+<script>
+  var p = new URLSearchParams(location.search)
+  var args = []
+  ;['pass','lang'].forEach(function(k){ if(p.get(k)) args.push(k+'='+encodeURIComponent(p.get(k))) })
+  var s = Number(p.get('scale') || 1)
+  var ox = Number(p.get('ox') || 0)   // 화면에 보여 줄 게임 좌표 x
+  var oy = Number(p.get('oy') || 0)   // 화면에 보여 줄 게임 좌표 y
+  var rot = p.get('rot') === '1'
+  var w = document.getElementById('wrap')
+  // 게임 좌표 (ox,oy) 가 화면 (0,0) 에 오도록 이동한 뒤 확대(회전)
+  if (rot) w.style.transform = 'rotate(90deg) translate(0,' + (-480 * s) + 'px) translate(' + (-oy) + 'px,' + (-ox) + 'px) scale(' + s + ')'
+  else w.style.transform = 'translate(' + (-ox * s) + 'px,' + (-oy * s) + 'px) scale(' + s + ')'
+  document.getElementById('g').src = 'index.html' + (args.length ? '?' + args.join('&') : '')
+</script>
+</body></html>
