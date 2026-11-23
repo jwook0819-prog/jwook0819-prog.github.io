@@ -1,1 +1,0 @@
-export{t as BODY,n as COVERABLE,r as DEFAULT_HAIR_COLOR,i as DEFAULT_SKIN,a as HAIR_COLORS,o as HAIR_STYLES,s as SKIN_TONES,c as applyCovers,l as avatarMaterials,u as buildAvatar,d as countTriangles,f as disposeAvatar,p as disposeAvatarMaterials,m as poseBreath,h as poseWave,g as setBlink,_ as setExpression,v as setPartVisible}from"./avatarBody-BWWEV70V.js";
