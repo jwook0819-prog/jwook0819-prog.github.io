@@ -16,8 +16,7 @@
   var rot = p.get('rot') === '1'
   var w = document.getElementById('wrap')
   // 게임 좌표 (ox,oy) 가 화면 (0,0) 에 오도록 이동한 뒤 확대(회전)
-  // rot: 시계방향 90도로 눕혀 크게 캡처. 게임 y=0 이 화면 오른쪽, x=0 이 화면 위로 온다
-  if (rot) w.style.transform = 'translate(' + (1040 * s + s * oy) + 'px,' + (-s * ox) + 'px) rotate(90deg) scale(' + s + ')'
+  if (rot) w.style.transform = 'rotate(90deg) translate(0,' + (-480 * s) + 'px) translate(' + (-oy) + 'px,' + (-ox) + 'px) scale(' + s + ')'
   else w.style.transform = 'translate(' + (-ox * s) + 'px,' + (-oy * s) + 'px) scale(' + s + ')'
   document.getElementById('g').src = 'index.html' + (args.length ? '?' + args.join('&') : '')
 </script>
