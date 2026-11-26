@@ -25,6 +25,7 @@
     stageKept: per(function () { return {} }), stagePlays: per(function () { return {} }),
     collection: collection, dexClaimed: per(function () { return false }),
     settings: { quality: 'high', qualityManual: true, perfLevel: 3, lang: lang, vibration: false, music: false, sfx: false },
+    attendance: { month: (new Date()).toISOString().slice(0,7), days: Array.from({length: Number((new Date()).toISOString().slice(8,10))}, function(_, i){ return i + 1 }), last: (new Date()).toISOString().slice(0,10), total: 0, plusDay: '', nudgeDay: (new Date()).toISOString().slice(0,10), lastBase: 0 },
     tutorialDone: true, fxIntroSeen: CIDS.slice()
   }
   localStorage.setItem('omg_test_gate_pass', '0819')
