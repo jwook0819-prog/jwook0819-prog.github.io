@@ -1,0 +1,5 @@
+<!doctype html><meta charset="utf-8"><title>seed link</title>
+<script>
+var q=new URLSearchParams(location.search);
+location.replace('seed.html?c=usa&lang='+(q.get('lang')||'ko')+(q.get('dex')==='1'?'&dex=1':''));
+</script>
